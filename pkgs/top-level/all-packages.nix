@@ -368,7 +368,9 @@ with pkgs;
 
   aide = callPackage ../tools/security/aide { };
 
-  aircrack-ng = callPackage ../tools/networking/aircrack-ng { };
+  aircrack-ng = callPackage ../tools/networking/aircrack-ng {
+    openssl = openssl_1_0_2;
+  };
 
   airfield = callPackage ../tools/networking/airfield { };
 
@@ -402,7 +404,9 @@ with pkgs;
 
   arandr = callPackage ../tools/X11/arandr { };
 
-  arangodb = callPackage ../servers/nosql/arangodb { };
+  arangodb = callPackage ../servers/nosql/arangodb {
+    openssl = openssl_1_0_2;
+  };
 
   arcanist = callPackage ../development/tools/misc/arcanist {};
 
@@ -1498,7 +1502,9 @@ with pkgs;
 
   dumptorrent = callPackage ../tools/misc/dumptorrent { };
 
-  duo-unix = callPackage ../tools/security/duo-unix { };
+  duo-unix = callPackage ../tools/security/duo-unix {
+    openssl = openssl_1_0_2;
+  };
 
   duplicity = callPackage ../tools/backup/duplicity {
     gnupg = gnupg1;
@@ -2094,7 +2100,9 @@ with pkgs;
 
   gtkvnc = callPackage ../tools/admin/gtk-vnc {};
 
-  gtmess = callPackage ../applications/networking/instant-messengers/gtmess { };
+  gtmess = callPackage ../applications/networking/instant-messengers/gtmess {
+    openssl = openssl_1_0_2;
+  };
 
   gup = callPackage ../development/tools/build-managers/gup {};
 
@@ -2660,7 +2668,9 @@ with pkgs;
 
   libpointmatcher = callPackage ../development/libraries/libpointmatcher { };
 
-  libtorrent = callPackage ../tools/networking/p2p/libtorrent { };
+  libtorrent = callPackage ../tools/networking/p2p/libtorrent {
+    openssl = openssl_1_0_2;
+  };
 
   libmpack = callPackage ../development/libraries/libmpack { };
 
@@ -3334,7 +3344,9 @@ with pkgs;
     libusb = libusb1;
   };
 
-  bully = callPackage ../tools/networking/bully { };
+  bully = callPackage ../tools/networking/bully {
+    openssl = openssl_1_0_2;
+  };
 
   pcapc = callPackage ../tools/networking/pcapc { };
 
@@ -6843,7 +6855,9 @@ with pkgs;
 
   assimp = callPackage ../development/libraries/assimp { };
 
-  asio = callPackage ../development/libraries/asio { };
+  asio = callPackage ../development/libraries/asio {
+    openssl = openssl_1_0_2;
+  };
 
   aspell = callPackage ../development/libraries/aspell { };
 
@@ -6895,7 +6909,9 @@ with pkgs;
 
   boost_process = callPackage ../development/libraries/boost-process { };
 
-  botan = callPackage ../development/libraries/botan { };
+  botan = callPackage ../development/libraries/botan {
+    openssl = openssl_1_0_2;
+  };
   botanUnstable = callPackage ../development/libraries/botan/unstable.nix { };
 
   box2d = callPackage ../development/libraries/box2d { };
@@ -7819,7 +7835,9 @@ with pkgs;
   libappindicator-gtk2 = callPackage ../development/libraries/libappindicator { gtkVersion = "2"; };
   libappindicator-gtk3 = callPackage ../development/libraries/libappindicator { gtkVersion = "3"; };
 
-  libarchive = callPackage ../development/libraries/libarchive { };
+  libarchive = callPackage ../development/libraries/libarchive {
+    openssl = openssl_1_0_2;
+  };
 
   libasr = callPackage ../development/libraries/libasr { };
 
@@ -10223,7 +10241,9 @@ with pkgs;
 
   bftpd = callPackage ../servers/ftp/bftpd {};
 
-  bind = callPackage ../servers/dns/bind { };
+  bind = callPackage ../servers/dns/bind {
+    openssl = openssl_1_0_2;
+  };
   dnsutils = bind.dnsutils;
 
   bird = callPackage ../servers/bird { };
@@ -10390,6 +10410,7 @@ with pkgs;
     # We don't use `with` statement here on purpose!
     # See https://github.com/NixOS/nixpkgs/pull/10474/files#r42369334
     modules = [ nginxModules.rtmp nginxModules.dav nginxModules.moreheaders ];
+    openssl = openssl_1_0_2;
   };
 
   nginxMainline = callPackage ../servers/http/nginx/mainline.nix {
@@ -11609,7 +11630,9 @@ with pkgs;
 
   gotools = callPackage ../development/tools/gotools { };
 
-  gogoclient = callPackage ../os-specific/linux/gogoclient { };
+  gogoclient = callPackage ../os-specific/linux/gogoclient {
+    openssl = openssl_1_0_2;
+  };
 
   nss_ldap = callPackage ../os-specific/linux/nss_ldap { };
 
